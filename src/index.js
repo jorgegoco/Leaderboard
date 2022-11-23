@@ -1,8 +1,6 @@
 import './index.css';
 import getResponse from './modules/utils.js';
 
-const API_KEY = 'QMhictd9pPqlR9FLpNfG';
-
 getResponse();
 
 const form = document.getElementById('form');
@@ -14,7 +12,7 @@ form.addEventListener('submit', async (e) => {
   data.score = form.elements[1].value;
   form.reset();
 
-  await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${API_KEY}/scores/`, {
+  await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.XURXI_KEY}/scores/`, {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {

@@ -1,5 +1,3 @@
-const API_KEY2 = 'QMhictd9pPqlR9FLpNfG';
-
 const dynamicList = obj => {
   const ul = document.querySelector('ul');
   ul.replaceChildren();
@@ -14,7 +12,7 @@ const dynamicList = obj => {
 }
 
 const getResponse = async () => {
-  const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${API_KEY2}/scores/`);
+  const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.XURXI_KEY}/scores/`);
   const jsonResponse = await response.json();
   const allData = jsonResponse.result;
   dynamicList(allData);
