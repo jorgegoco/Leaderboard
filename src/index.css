@@ -9,7 +9,7 @@
 
 body {
   margin: 5% 5%;
-  background-color:rgb(238, 234, 234);
+  background-color: rgb(238, 234, 234);
 }
 
 header {
@@ -63,16 +63,16 @@ input {
     0 8px 10px lightgray,
     -10px 8px 15px lightgray,
     10px 8px 15px lightgray;
-  padding: 3%;  
-}
-
-li:nth-child(2n+1) {
-  background-color: rgb(215, 211, 211);
+  padding: 3%;
 }
 
 li {
   padding: 1% 2%;
   font-weight: 600;
+}
+
+li:nth-child(2n+1) {
+  background-color: rgb(215, 211, 211);
 }
 
 form {

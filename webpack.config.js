@@ -11,9 +11,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
-    }), 
-    new Dotenv()
+      template: './src/index.html',
+    }),
+    new Dotenv(),
   ],
   module: {
     rules: [

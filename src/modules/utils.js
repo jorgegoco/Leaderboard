@@ -1,4 +1,4 @@
-const dynamicList = obj => {
+const dynamicList = (obj) => {
   const ul = document.querySelector('ul');
   ul.replaceChildren();
   for (let i = 0; i < obj.length; i += 1) {
@@ -9,13 +9,13 @@ const dynamicList = obj => {
     li.appendChild(text);
     ul.appendChild(li);
   }
-}
+};
 
 const getResponse = async () => {
   const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.XURXI_KEY}/scores/`);
   const jsonResponse = await response.json();
   const allData = jsonResponse.result;
   dynamicList(allData);
-}
+};
 
-export {getResponse as default};
+export { getResponse as default };
