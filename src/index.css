@@ -9,6 +9,7 @@
 
 body {
   margin: 5% 5%;
+  background-color: rgb(238, 234, 234);
 }
 
 header {
@@ -16,43 +17,62 @@ header {
   font-size: 28px;
 }
 
-h3 {
-  font-size: 26px;
+h2 {
+  font-size: 34px;
 }
 
 button {
   cursor: pointer;
   border: 1px solid black;
-  background-color: white;
-  padding: 5px;
+  border-radius: 4px;
+  background-color: green;
+  color: white;
+  padding: 0 5px;
 }
 
 input {
-  border: 1px solid black;
+  border: 1px solid rgb(200, 200, 255);
+  border-radius: 4px;
+  background-color: rgb(218, 232, 241);
+  padding: 5px;
 }
 
 .big-main {
   display: flex;
-  justify-content: space-between;
-  margin-right: 40%;
-  margin-left: 10%;
+  justify-content: space-evenly;
 }
 
 .scores {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
+  width: 40%;
 }
 
 .scores-main {
   display: flex;
-  column-gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .scores-list {
-  border: 1px solid black;
+  height: 50vh;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+  box-shadow:
+    0 8px 10px lightgray,
+    -10px 8px 15px lightgray,
+    10px 8px 15px lightgray;
+  padding: 3%;
+}
+
+li {
+  padding: 1% 2%;
+  font-weight: 600;
+}
+
+li:nth-child(2n+1) {
+  background-color: rgb(215, 211, 211);
 }
 
 form {
@@ -66,4 +86,6 @@ form > .form-button {
   padding: 5px;
   align-self: flex-end;
   cursor: pointer;
+  background-color: blue;
+  color: white;
 }
