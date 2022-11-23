@@ -17,7 +17,7 @@ form.addEventListener('submit', async (e) => {
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
-  })
+  });
 });
 
 const button = document.querySelector('button');
@@ -29,10 +29,10 @@ button.addEventListener('click', async () => {
   const allData = jsonResponse.result;
   ul.replaceChildren();
   for (let i = 0; i < allData.length; i += 1) {
-    let user = allData[i].user;
-    let score = allData[i].score;
+    const { user } = allData[i];
+    const { score } = allData[i];
     const li = document.createElement('li');
-    let text = document.createTextNode(`${user}: ${score}`);
+    const text = document.createTextNode(`${user}: ${score}`);
     li.appendChild(text);
     ul.appendChild(li);
   }
