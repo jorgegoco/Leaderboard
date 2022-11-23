@@ -1,6 +1,9 @@
 import './index.css';
+import getResponse from './modules/utils.js';
 
 const API_KEY = 'QMhictd9pPqlR9FLpNfG';
+
+getResponse();
 
 const form = document.getElementById('form');
 
@@ -20,20 +23,4 @@ form.addEventListener('submit', async (e) => {
   });
 });
 
-const button = document.querySelector('button');
-const ul = document.querySelector('ul');
-
-button.addEventListener('click', async () => {
-  const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${API_KEY}/scores/`);
-  const jsonResponse = await response.json();
-  const allData = jsonResponse.result;
-  ul.replaceChildren();
-  for (let i = 0; i < allData.length; i += 1) {
-    const { user } = allData[i];
-    const { score } = allData[i];
-    const li = document.createElement('li');
-    const text = document.createTextNode(`${user}: ${score}`);
-    li.appendChild(text);
-    ul.appendChild(li);
-  }
-});
+document.querySelector('button').addEventListener('click', getResponse);
