@@ -89,3 +89,7 @@ form > .form-button {
   background-color: blue;
   color: white;
 }
+
+@media (max-width: 700px) {
+  
+}
