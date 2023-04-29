@@ -89,3 +89,16 @@ form > .form-button {
   background-color: blue;
   color: white;
 }
+
+@media (max-width: 740px) {
+  .big-main {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+  }
+
+  .scores-main {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
